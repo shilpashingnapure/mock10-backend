@@ -12,9 +12,10 @@ app.post('/login' , login)
 
 app.post('/profile' , getProfile)
 
+const port = process.env.PORT || 3001
 const start = async ()=>{
     await connect()
-    app.listen(5000, () => {
+    app.listen(port, () => {
 
         console.log("port 5000..");
     });
